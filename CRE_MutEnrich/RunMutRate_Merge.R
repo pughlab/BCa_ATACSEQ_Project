@@ -25,17 +25,17 @@ option_list <- list(
               help="Bin size that is a multipler of --wscale, if NULL, will determine bin size", metavar="integer"),
   make_option(c("-z", "--wscale"), type="integer", default=1000,
               help="Multiplier of bin-size", metavar="integer"),
-  make_option(c("-m", "--somaticdir"), type="character", default="~/git/MutRegEle/demo_data",
+  make_option(c("-m", "--somaticdir"), type="character", default="",
               help="Path to directory containing somatic VCF file [default= %default]", metavar="character"),
   make_option(c("-n", "--germlinedir"), type="character", default=NULL,
               help="Path to directory containing germline VCF file [default= %default]", metavar="character"),
-  make_option(c("-g", "--gitdir"), type="character", default="~/git/MutRegEle",
+  make_option(c("-g", "--gitdir"), type="character", default="~/git/BCa_ATACSEQ_Project/CRE_MutEnrich",
               help="Path to Git directory [default= %default]", metavar="character"),
-  make_option(c("-r", "--refdir"), type="character", default="~/git/MutRegEle/demo_data",
+  make_option(c("-r", "--refdir"), type="character", default="",
               help="Path to directory containing target/catalogue files [default= %default]", metavar="character"),
   make_option(c("-t", "--target"), type="character", default="Gencodev19_Promoters_REDUCE.bed",
               help="Targets file name [default= %default]", metavar="character"),
-  make_option(c("-c", "--catalogue"), type="character", default="annotated_regions_targets.bed",
+  make_option(c("-c", "--catalogue"), type="character", default="",
               help="Catalogue file name [default= %default]", metavar="character"),
   make_option(c("-f", "--flank"), type="integer", default=0,
               help="Flanking regions (bp) around the catalogue if you don't have a targets bed
@@ -49,7 +49,7 @@ opt <- parse_args(opt_parser)
 
 
 ### Setup Parameters ###
-opt$id='KOM-2-002'
+opt$id=''
 opt$refdir=''
 opt$target=''  ## regions of interest
 opt$catalogue='' ## accessible chromatin catalogue
