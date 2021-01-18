@@ -48,4 +48,7 @@ An algorithm to identify hotspots of mutations within regulatory elements agains
 
 **RunMutRate_Merge.R**: The main pipeline used to execute the analysis.
 
+# Authors
+Rene Quevedo
 
+Samah El Ghamrasni
