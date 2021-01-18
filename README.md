@@ -5,10 +5,11 @@ This tool is designed to identify significant enrichment of mutations within tra
 
 ## Running modMEMOS
 **Required data**
-*Mutation calls SNVs (.vcf)
-*Peaks of interest (from ChIP- or ATAC-seq or both) (.bed)
-*Fasta reference file (.fa)
-*Transcription factor weight matrix (.pfm)
+
+* Mutation calls SNVs (.vcf)
+* Peaks of interest (from ChIP- or ATAC-seq or both) (.bed)
+* Fasta reference file (.fa)
+* Transcription factor weight matrix (.pfm)
 
 **modMEMOS-wrapper.sh**: the main pipeline used to execute the modMEMOs analysis.
 
