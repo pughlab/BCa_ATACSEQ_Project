@@ -2,7 +2,7 @@
 # modMEMOs (Modified MEMOS)
 Modified version of the previously published tool MEMOS (Mazrooei et al. 2019). 
 
-This tool is designed to identify significant enrichment of mutations within transcription factor binding sites and flanking regions. modMEMOs can be run using wither ChIP-seq or ATAC-seq data.
+This tool is designed to identify significant enrichment of mutations within transcription factor binding sites and flanking regions. modMEMOs can be run using either ChIP-seq or ATAC-seq data.
 
 ## Running modMEMOS
 **Required data**
