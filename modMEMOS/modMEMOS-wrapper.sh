@@ -62,9 +62,4 @@ do
 	cd $OUTDIR/${TF}_shuffletest_${PVAL}
 	$WDIR/shuffleTest.sh  $OUTDIR/${pfmName%.*}-${PVAL}.bed  $FLANK  $MUT  $HG19  $NUM 1000  ${BLACKLIST}  ${INCLUDE} ${TF}
 	echo "done with test!"
-###################### Creating Plots ############################
-	# centerMotifs centers the motifs and returns a file with  postfix .center
-	$WDIR/centerMotifs.sh $OUTDIR/${pfmName%.*}-${PVAL}.bed
-#	Rscript $WDIR/MutationEnrichment_stream.R $OUTDIR $MUT $OUTDIR/${pfmName%.*}-${PVAL}.bed.centers $FLANK $FLANK ${TF}_mutation_enrichment_${FLANK} 1200 1000 $TF 10
-
 done
