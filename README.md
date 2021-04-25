@@ -19,10 +19,10 @@ This tool is designed to identify significant enrichment of mutations within tra
 **modMEMOS_ATAC_Plus_ChIP.sh**: A bash script used to prepare bed and fasta files required to run modMEMOs and to execute modMEMOS-wrapper.sh.
 
 
-# HoSRE (HotSpot in Regulatory Elements) 
+# HoRSE (Hotspot of cis-Regulatory, Significantly-mutated Elements) 
 An algorithm to identify hotspots of mutations within regulatory elements against a background of global and local mutation rates.
 
-## Running HoSRE 
+## Running HoRSE 
 
 **MkPromotersBed_hg19()**:Create promoters reference bed file.
 
