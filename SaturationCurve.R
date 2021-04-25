@@ -44,7 +44,7 @@ calculateSaturation <- function (n=1, peak.ranges){
 # MAIN 
 ######
 
-atac.dir <- "~/Samwise/projects/KOMBAT/atacseq_analysis/Sorted_ATACSeq_hg19/Peaks_KOM-Immune_BC/ATAC_Peaks_All/" 
+atac.dir <- "~/Samwise/projects/KOMBAT/atacseq_analysis/Sorted_ATACSeq_hg19/Processed.ATAC.Samples/MACS2_0.005/" 
 
 n <- 1000 # number of simulations
 peak.cat <- makeCatalogue(atac.dir)
@@ -78,7 +78,11 @@ SN_sat99<--(log((sat99-Asym_coef)/(R0_coef-Asym_coef))/exp(lrc_coef)) #number of
 curpc.median<-round((mean(split(data.m3, f=data.m3$sampleNum)[['25']]$uniquePeaks)/Asym_coef)*100)
 
 #potting saturation curve
+dir = "~/OneDrive - UHN/Documents/ATAC-results-xls/Manuscript_plots/"
+pdf(file=paste(dir, "SaturationCurveKOMBAT2", ".pdf", sep=""), width = 10, height = 8, 
+    pointsize = 12, useDingbats = FALSE)
 
-boxplot(saturation.calc, ylim=c(0,150000), xlim=c(0,80))
-lines(pred.3, col="dodgerblue", lwd=1,lty="dashed",xlim=c(0,50), ylim=c(0,300000),)
+boxplot(saturation.calc, ylim=c(0,300000), xlim=c(0,50), border= "#636363")
+lines(pred.3, col="Maroon", lwd=1,lty="dashed",xlim=c(0,50), ylim=c(0,300000),)
 
+dev.off()
