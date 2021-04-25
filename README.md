@@ -1,23 +1,4 @@
 
-# modMEMOs (Modified MEMOS)
-Modified version of the previously published tool MEMOS (Mazrooei et al. 2019). 
-
-This tool is designed to identify significant enrichment of mutations within transcription factor binding sites and flanking regions. modMEMOs can be run using either ChIP-seq or ATAC-seq data.
-
-## Running modMEMOS
-**Required data**
-
-* Mutation calls SNVs (.vcf)
-* Peaks of interest (from ChIP- or ATAC-seq or both) (.bed)
-* Fasta reference file (.fa)
-* Transcription factor's position weight matrix (.pfm)
-
-**modMEMOS-wrapper.sh**: the main pipeline used to execute the modMEMOs analysis.
-
-**shuffleTest.sh**: Will randomly shuffle transcription factor sites, overlap these regions with mutation calls and count the number of SNVs. This process is repeated ${NUM} times. 
-
-**modMEMOS_ATAC_Plus_ChIP.sh**: A bash script used to prepare bed and fasta files required to run modMEMOs and to execute modMEMOS-wrapper.sh.
-
 
 # HoRSE (Hotspot of cis-Regulatory, Significantly-mutated Elements) 
 An algorithm to identify hotspots of mutations within regulatory elements against a background of global and local mutation rates.
@@ -48,6 +29,26 @@ An algorithm to identify hotspots of mutations within regulatory elements agains
 **mutRatePvalue()**: Using the Binomial test calculate the P value for each mutation followed by FDR adjustment.
 
 **RunMutRate_Merge.R**: The main pipeline used to execute the analysis.
+
+# modMEMOs (Modified MEMOS)
+Modified version of the previously published tool MEMOS (Mazrooei et al. 2019). 
+
+This tool is designed to identify significant enrichment of mutations within transcription factor binding sites and flanking regions. modMEMOs can be run using either ChIP-seq or ATAC-seq data.
+
+## Running modMEMOS
+**Required data**
+
+* Mutation calls SNVs (.vcf)
+* Peaks of interest (from ChIP- or ATAC-seq or both) (.bed)
+* Fasta reference file (.fa)
+* Transcription factor's position weight matrix (.pfm)
+
+**modMEMOS-wrapper.sh**: the main pipeline used to execute the modMEMOs analysis.
+
+**shuffleTest.sh**: Will randomly shuffle transcription factor sites, overlap these regions with mutation calls and count the number of SNVs. This process is repeated ${NUM} times. 
+
+**modMEMOS_ATAC_Plus_ChIP.sh**: A bash script used to prepare bed and fasta files required to run modMEMOs and to execute modMEMOS-wrapper.sh.
+
 
 # Authors
 Rene Quevedo
